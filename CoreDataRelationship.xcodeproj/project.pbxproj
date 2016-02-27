@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		651D9BF91C8186A500FDBDB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651D9BF81C8186A500FDBDB6 /* AppDelegate.swift */; };
-		651D9BFB1C8186A500FDBDB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651D9BFA1C8186A500FDBDB6 /* ViewController.swift */; };
 		651D9BFE1C8186A500FDBDB6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651D9BFC1C8186A500FDBDB6 /* Main.storyboard */; };
 		651D9C011C8186A500FDBDB6 /* CoreDataRelationship.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 651D9BFF1C8186A500FDBDB6 /* CoreDataRelationship.xcdatamodeld */; };
 		651D9C031C8186A500FDBDB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 651D9C021C8186A500FDBDB6 /* Assets.xcassets */; };
@@ -19,6 +18,8 @@
 		651D9C2E1C81882600FDBDB6 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651D9C2A1C81882600FDBDB6 /* Dish.swift */; };
 		651D9C2F1C81882600FDBDB6 /* DiningTable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651D9C2B1C81882600FDBDB6 /* DiningTable+CoreDataProperties.swift */; };
 		651D9C301C81882600FDBDB6 /* DiningTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651D9C2C1C81882600FDBDB6 /* DiningTable.swift */; };
+		651D9C321C8188C000FDBDB6 /* MainTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651D9C311C8188C000FDBDB6 /* MainTableViewController.swift */; };
+		651D9C341C8189FD00FDBDB6 /* AddEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651D9C331C8189FD00FDBDB6 /* AddEditViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,7 +42,6 @@
 /* Begin PBXFileReference section */
 		651D9BF51C8186A500FDBDB6 /* CoreDataRelationship.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoreDataRelationship.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		651D9BF81C8186A500FDBDB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		651D9BFA1C8186A500FDBDB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		651D9BFD1C8186A500FDBDB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		651D9C001C8186A500FDBDB6 /* CoreDataRelationship.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreDataRelationship.xcdatamodel; sourceTree = "<group>"; };
 		651D9C021C8186A500FDBDB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,6 +57,8 @@
 		651D9C2A1C81882600FDBDB6 /* Dish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		651D9C2B1C81882600FDBDB6 /* DiningTable+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DiningTable+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		651D9C2C1C81882600FDBDB6 /* DiningTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningTable.swift; sourceTree = "<group>"; };
+		651D9C311C8188C000FDBDB6 /* MainTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTableViewController.swift; sourceTree = "<group>"; };
+		651D9C331C8189FD00FDBDB6 /* AddEditViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddEditViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,8 +114,9 @@
 			isa = PBXGroup;
 			children = (
 				651D9BF81C8186A500FDBDB6 /* AppDelegate.swift */,
-				651D9BFA1C8186A500FDBDB6 /* ViewController.swift */,
 				651D9BFC1C8186A500FDBDB6 /* Main.storyboard */,
+				651D9C331C8189FD00FDBDB6 /* AddEditViewController.swift */,
+				651D9C311C8188C000FDBDB6 /* MainTableViewController.swift */,
 				651D9C021C8186A500FDBDB6 /* Assets.xcassets */,
 				651D9C041C8186A500FDBDB6 /* LaunchScreen.storyboard */,
 				651D9C071C8186A500FDBDB6 /* Info.plist */,
@@ -271,13 +274,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				651D9BFB1C8186A500FDBDB6 /* ViewController.swift in Sources */,
 				651D9C2E1C81882600FDBDB6 /* Dish.swift in Sources */,
 				651D9C301C81882600FDBDB6 /* DiningTable.swift in Sources */,
 				651D9BF91C8186A500FDBDB6 /* AppDelegate.swift in Sources */,
 				651D9C2F1C81882600FDBDB6 /* DiningTable+CoreDataProperties.swift in Sources */,
+				651D9C341C8189FD00FDBDB6 /* AddEditViewController.swift in Sources */,
 				651D9C011C8186A500FDBDB6 /* CoreDataRelationship.xcdatamodeld in Sources */,
 				651D9C2D1C81882600FDBDB6 /* Dish+CoreDataProperties.swift in Sources */,
+				651D9C321C8188C000FDBDB6 /* MainTableViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
