@@ -5,6 +5,22 @@
    <BuildAction
       parallelizeBuildables = "YES"
       buildImplicitDependencies = "YES">
+      <BuildActionEntries>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "YES"
+            buildForArchiving = "YES"
+            buildForAnalyzing = "YES">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "651D9BF41C8186A500FDBDB6"
+               BuildableName = "CoreDataRelationship.app"
+               BlueprintName = "CoreDataRelationship"
+               ReferencedContainer = "container:CoreDataRelationship.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
+      </BuildActionEntries>
    </BuildAction>
    <TestAction
       buildConfiguration = "Debug"
@@ -12,7 +28,36 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "651D9C0B1C8186A500FDBDB6"
+               BuildableName = "CoreDataRelationshipTests.xctest"
+               BlueprintName = "CoreDataRelationshipTests"
+               ReferencedContainer = "container:CoreDataRelationship.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "651D9C161C8186A500FDBDB6"
+               BuildableName = "CoreDataRelationshipUITests.xctest"
+               BlueprintName = "CoreDataRelationshipUITests"
+               ReferencedContainer = "container:CoreDataRelationship.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
+      <MacroExpansion>
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "651D9BF41C8186A500FDBDB6"
+            BuildableName = "CoreDataRelationship.app"
+            BlueprintName = "CoreDataRelationship"
+            ReferencedContainer = "container:CoreDataRelationship.xcodeproj">
+         </BuildableReference>
+      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -26,6 +71,16 @@
       debugDocumentVersioning = "YES"
       debugServiceExtension = "internal"
       allowLocationSimulation = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "651D9BF41C8186A500FDBDB6"
+            BuildableName = "CoreDataRelationship.app"
+            BlueprintName = "CoreDataRelationship"
+            ReferencedContainer = "container:CoreDataRelationship.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
       <AdditionalOptions>
       </AdditionalOptions>
    </LaunchAction>
@@ -35,6 +90,16 @@
       savedToolIdentifier = ""
       useCustomWorkingDirectory = "NO"
       debugDocumentVersioning = "YES">
+      <BuildableProductRunnable
+         runnableDebuggingMode = "0">
+         <BuildableReference
+            BuildableIdentifier = "primary"
+            BlueprintIdentifier = "651D9BF41C8186A500FDBDB6"
+            BuildableName = "CoreDataRelationship.app"
+            BlueprintName = "CoreDataRelationship"
+            ReferencedContainer = "container:CoreDataRelationship.xcodeproj">
+         </BuildableReference>
+      </BuildableProductRunnable>
    </ProfileAction>
    <AnalyzeAction
       buildConfiguration = "Debug">
