@@ -15,6 +15,10 @@
 		651D9C061C8186A500FDBDB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 651D9C041C8186A500FDBDB6 /* LaunchScreen.storyboard */; };
 		651D9C111C8186A500FDBDB6 /* CoreDataRelationshipTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651D9C101C8186A500FDBDB6 /* CoreDataRelationshipTests.swift */; };
 		651D9C1C1C8186A500FDBDB6 /* CoreDataRelationshipUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651D9C1B1C8186A500FDBDB6 /* CoreDataRelationshipUITests.swift */; };
+		651D9C2D1C81882600FDBDB6 /* Dish+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651D9C291C81882600FDBDB6 /* Dish+CoreDataProperties.swift */; };
+		651D9C2E1C81882600FDBDB6 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651D9C2A1C81882600FDBDB6 /* Dish.swift */; };
+		651D9C2F1C81882600FDBDB6 /* DiningTable+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651D9C2B1C81882600FDBDB6 /* DiningTable+CoreDataProperties.swift */; };
+		651D9C301C81882600FDBDB6 /* DiningTable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 651D9C2C1C81882600FDBDB6 /* DiningTable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,10 @@
 		651D9C171C8186A500FDBDB6 /* CoreDataRelationshipUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoreDataRelationshipUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		651D9C1B1C8186A500FDBDB6 /* CoreDataRelationshipUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataRelationshipUITests.swift; sourceTree = "<group>"; };
 		651D9C1D1C8186A500FDBDB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		651D9C291C81882600FDBDB6 /* Dish+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Dish+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		651D9C2A1C81882600FDBDB6 /* Dish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		651D9C2B1C81882600FDBDB6 /* DiningTable+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "DiningTable+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		651D9C2C1C81882600FDBDB6 /* DiningTable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiningTable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,6 +87,10 @@
 		651D9BEC1C8186A500FDBDB6 = {
 			isa = PBXGroup;
 			children = (
+				651D9C291C81882600FDBDB6 /* Dish+CoreDataProperties.swift */,
+				651D9C2A1C81882600FDBDB6 /* Dish.swift */,
+				651D9C2B1C81882600FDBDB6 /* DiningTable+CoreDataProperties.swift */,
+				651D9C2C1C81882600FDBDB6 /* DiningTable.swift */,
 				651D9BF71C8186A500FDBDB6 /* CoreDataRelationship */,
 				651D9C0F1C8186A500FDBDB6 /* CoreDataRelationshipTests */,
 				651D9C1A1C8186A500FDBDB6 /* CoreDataRelationshipUITests */,
@@ -260,8 +272,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				651D9BFB1C8186A500FDBDB6 /* ViewController.swift in Sources */,
+				651D9C2E1C81882600FDBDB6 /* Dish.swift in Sources */,
+				651D9C301C81882600FDBDB6 /* DiningTable.swift in Sources */,
 				651D9BF91C8186A500FDBDB6 /* AppDelegate.swift in Sources */,
+				651D9C2F1C81882600FDBDB6 /* DiningTable+CoreDataProperties.swift in Sources */,
 				651D9C011C8186A500FDBDB6 /* CoreDataRelationship.xcdatamodeld in Sources */,
+				651D9C2D1C81882600FDBDB6 /* Dish+CoreDataProperties.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
