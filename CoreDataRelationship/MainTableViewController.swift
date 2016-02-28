@@ -7,12 +7,47 @@
 //
 
 import UIKit
+import CoreData
 
-class MainTableViewController: UITableViewController {
+class MainTableViewController: UITableViewController,NSFetchedResultsControllerDelegate{
 
+    let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
+    var fetchResultController = NSFetchedResultsController()
+    
+    var dish = Dish()
+    
+   
+    
+    
+    
+    func loadData() {
+        
+           let request = NSFetchRequest(entityName: "Dish")
+            request.sortDescriptors = [NSSortDescriptor(key: "dishName", ascending: true)]
+        
+        fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
+        
+        try! fetchResultController.performFetch()
+        
+       
+    }
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+     
+        
+        loadData()
+        
+        //use fetchResultController delegate
+         fetchResultController.delegate = self
+        
+        self.tableView.reloadData()
+       
+        
+        
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -20,29 +55,48 @@ class MainTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
+    
+    
+    func controllerDidChangeContent(controller: NSFetchedResultsController) {
+        self.tableView.reloadData()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return (fetchResultController.sections?.count)!
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+         return fetchResultController.sections![section].numberOfObjects
     }
 
  
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
-
-        // Configure the cell...
-
+        
+        let dish = fetchResultController.objectAtIndexPath(indexPath) as! Dish
+       
+        // array should only have one object inside per dish since it line 87 output one item at a time
+//       
+//        let enityDescritpion =  NSEntityDescription.entityForName("Dish", inManagedObjectContext: moc)
+//        
+//        
+//        let dishTable = Dish(entity: enityDescritpion!, insertIntoManagedObjectContext: moc) 
+        
+                                                                    //"diningTable" is the name of the relationship
+        cell.textLabel?.text = dish.dishName! + " Table Number "
+        
+        
         return cell
     }
 

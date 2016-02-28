@@ -41,7 +41,7 @@
             </objects>
             <point key="canvasLocation" x="1024" y="317"/>
         </scene>
-        <!--Title-->
+        <!--add / edit-->
         <scene sceneID="32h-kW-BzE">
             <objects>
                 <viewController id="YqW-fW-5sg" customClass="AddEditViewController" customModule="CoreDataRelationship" customModuleProvider="target" sceneMemberID="viewController">
@@ -80,7 +80,7 @@
                             <constraint firstItem="efN-yC-mdn" firstAttribute="centerX" secondItem="78J-dd-9Lq" secondAttribute="centerX" id="qNP-Ap-smx"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="Dev-kk-9cn">
+                    <navigationItem key="navigationItem" title="add / edit" id="Dev-kk-9cn">
                         <barButtonItem key="rightBarButtonItem" title="Save" id="SjI-gn-T1z">
                             <connections>
                                 <action selector="saveOnClick:" destination="YqW-fW-5sg" id="RUs-XX-hs8"/>
