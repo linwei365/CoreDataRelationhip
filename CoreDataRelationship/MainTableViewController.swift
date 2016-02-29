@@ -87,7 +87,7 @@ class MainTableViewController: UITableViewController,NSFetchedResultsControllerD
         let dish = fetchResultController.objectAtIndexPath(indexPath) as! Dish
        
         // array should only have one object inside per dish since it line 87 output one item at a time
-//       
+  
 //        let enityDescritpion =  NSEntityDescription.entityForName("Dish", inManagedObjectContext: moc)
 //        
 //        
