@@ -88,43 +88,21 @@ class MainTableViewController: UITableViewController,NSFetchedResultsControllerD
        
         // array should only have one object inside per dish since it line 87 output one item at a time
   
-//        let enityDescritpion =  NSEntityDescription.entityForName("DiningTable", inManagedObjectContext: moc)
-//        
-//        
-//        let dishTable = DiningTable(entity: enityDescritpion!, insertIntoManagedObjectContext: moc) 
-        
-                                                                    //"diningTable" is the name of the relationship
-        
-    
-        
-//        NSString *dishName = @"Ramen"; // The string that you are looking for
-//        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY table.dish.dishName == %@", dishName];
-//        NSSet *filteredSet = [yourSet filteredSetUsingPredicate:predicate];
-//        
-//        var dish = DiningTable()
-//        dish = filteredSet.firstOjbect
-//        
-//        let tableName =  ""
-//        let predicate =  NSPredicate(format: "ANY dish.diningTable == %@", <#T##args: CVarArgType...##CVarArgType#>)
-//       dish.diningTable?.filteredSetUsingPredicate(<#T##predicate: NSPredicate##NSPredicate#>)
-        
-       print(diningTable.dish)
-        
-//        [[set allObjects] componentsJoinedByString:@" "];
-        
  
         
+        
+        //Convertting  set to array
         let dishes = diningTable.dish?.allObjects as! [Dish]
         
         var dishNames = String()
         for dish in dishes {
             
-            dishNames = dishNames +  ","  + dish.dishName!
+            dishNames = dishNames +  ", "  + dish.dishName!
         }
         
-        cell.textLabel?.text = "table: " + diningTable.tableNumber! + " customers: " + diningTable.customerCount! + dishes[0].dishName!
+        cell.textLabel?.text = "table: " + diningTable.tableNumber! + " customers: " + diningTable.customerCount! + " " + dishes[0].dishName!
         
-        
+//         cell.textLabel?.text = "table: " + diningTable.tableNumber! + " customers: " + diningTable.customerCount!  + dishNames
         
         return cell
     }
