@@ -122,7 +122,7 @@ class MainTableViewController: UITableViewController,NSFetchedResultsControllerD
             dishNames = dishNames +  ","  + dish.dishName!
         }
         
-        cell.textLabel?.text = "table: " + diningTable.tableNumber! + " customers: " + diningTable.customerCount! + dishNames
+        cell.textLabel?.text = "table: " + diningTable.tableNumber! + " customers: " + diningTable.customerCount! + dishes[0].dishName!
         
         
         
