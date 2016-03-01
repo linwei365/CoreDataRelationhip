@@ -50,11 +50,17 @@ class AddEditViewController: UIViewController {
         dish.diningTable = tableManyRelation
        
         
+    
+        
         //create too many relationship assgin to table this one not needed
         let dishManyRelation =  table.valueForKeyPath("dish") as! NSMutableSet
         dishManyRelation.addObject(dish)
         table.dish = dishManyRelation
         
+        
+        
+        
+   
         
         
         try! moc.save()

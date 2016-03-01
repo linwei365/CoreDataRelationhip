@@ -15,6 +15,7 @@ import CoreData
 extension Dish {
 
     @NSManaged var dishName: String?
+    
     @NSManaged var diningTable: NSSet?
 
 }

@@ -14,7 +14,7 @@ class MainTableViewController: UITableViewController,NSFetchedResultsControllerD
     let moc = (UIApplication.sharedApplication().delegate as! AppDelegate).managedObjectContext
     var fetchResultController = NSFetchedResultsController()
     
-    var dish = Dish()
+    var dish = DiningTable()
     
    
     
@@ -22,8 +22,8 @@ class MainTableViewController: UITableViewController,NSFetchedResultsControllerD
     
     func loadData() {
         
-           let request = NSFetchRequest(entityName: "Dish")
-            request.sortDescriptors = [NSSortDescriptor(key: "dishName", ascending: true)]
+           let request = NSFetchRequest(entityName: "DiningTable")
+            request.sortDescriptors = [NSSortDescriptor(key: "tableNumber", ascending: true)]
         
         fetchResultController = NSFetchedResultsController(fetchRequest: request, managedObjectContext: moc, sectionNameKeyPath: nil, cacheName: nil)
         
@@ -84,17 +84,46 @@ class MainTableViewController: UITableViewController,NSFetchedResultsControllerD
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
         
-        let dish = fetchResultController.objectAtIndexPath(indexPath) as! Dish
+        let diningTable = fetchResultController.objectAtIndexPath(indexPath) as! DiningTable
        
         // array should only have one object inside per dish since it line 87 output one item at a time
   
-//        let enityDescritpion =  NSEntityDescription.entityForName("Dish", inManagedObjectContext: moc)
+//        let enityDescritpion =  NSEntityDescription.entityForName("DiningTable", inManagedObjectContext: moc)
 //        
 //        
-//        let dishTable = Dish(entity: enityDescritpion!, insertIntoManagedObjectContext: moc) 
+//        let dishTable = DiningTable(entity: enityDescritpion!, insertIntoManagedObjectContext: moc) 
         
                                                                     //"diningTable" is the name of the relationship
-        cell.textLabel?.text = dish.dishName! + " Table Number "
+        
+    
+        
+//        NSString *dishName = @"Ramen"; // The string that you are looking for
+//        NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY table.dish.dishName == %@", dishName];
+//        NSSet *filteredSet = [yourSet filteredSetUsingPredicate:predicate];
+//        
+//        var dish = DiningTable()
+//        dish = filteredSet.firstOjbect
+//        
+//        let tableName =  ""
+//        let predicate =  NSPredicate(format: "ANY dish.diningTable == %@", <#T##args: CVarArgType...##CVarArgType#>)
+//       dish.diningTable?.filteredSetUsingPredicate(<#T##predicate: NSPredicate##NSPredicate#>)
+        
+       print(diningTable.dish)
+        
+//        [[set allObjects] componentsJoinedByString:@" "];
+        
+ 
+        
+        let dishes = diningTable.dish?.allObjects as! [Dish]
+        
+        var dishNames = String()
+        for dish in dishes {
+            
+            dishNames = dishNames +  ","  + dish.dishName!
+        }
+        
+        cell.textLabel?.text = "table: " + diningTable.tableNumber! + " customers: " + diningTable.customerCount! + dishNames
+        
         
         
         return cell
